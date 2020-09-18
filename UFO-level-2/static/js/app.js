@@ -58,11 +58,15 @@ function runFilter() {
   var countryValue = countryInput.property("value");
 
   // Select the shape input element and get the raw HTML node
-  var shapeInput = d3.select("#country");
+  var shapeInput = d3.select("#shape");
   // Get the shape value property of the input element
   var shapeValue = shapeInput.property("value");
 
-  var filteredData = tableData.filter(tableData => (tableData.datetime == dateValue || tableData.datetime ) && tableData.city == cityValue && tableData.state == stateValue && tableData.country == countryValue && tableData.shape == shapeValue);
+  var filteredData = tableData.filter(tableData => (tableData.datetime == dateValue) 
+    || (tableData.city == cityValue) 
+    || (tableData.state == stateValue) 
+    || (tableData.country == countryValue) 
+    || (tableData.shape == shapeValue));
 
   tbody.html("");
 
