@@ -25,9 +25,24 @@ tableData.forEach((tableInput) => {
     });
 });
 
-function selectDate(date){
-  return date.datetime === date
-};
+// var selectDate = (".tbody tr").forEach(function() {
+//   var row = $(this);
+//   var date = stringToDate(row.find("td").eq(2).text());
+  
+//   //show all rows by default
+//   var show = true;
+
+//   //if filtered date is valid and row date is does't match filtered date, hide the row
+//   if (date !==)
+//     show = false;
+  
+//   if (show)
+//     row.show();
+//   else
+//     row.hide();
+// });
+
+
   
 // Select the button
 var button = d3.select("#button");
@@ -47,9 +62,13 @@ function runFilter() {
 
   // Select the input element and get the raw HTML node
   var dateInput = d3.select("#datetime");
+  // Get the value property of the input element
+  var dateValue = dateInput.property("value");
 
-  var filteredDate = selectDate(dateInput) ;
- 
-  d3.select("tbody").text(filteredDate)
+  var filteredDate = tableData.filter(tableData => tableData.datetime === dateValue);
+
+  filteredDate.show()
+
+
 
 };
