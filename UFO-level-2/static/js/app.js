@@ -37,17 +37,32 @@ function runFilter() {
   // Prevent the page from refreshing
   d3.event.preventDefault();
 
-  // Select the data input element and get the raw HTML node
+  // Select the date input element and get the raw HTML node
   var dateInput = d3.select("#datetime");
-  // Get the value property of the input element
+  // Get the date value property of the input element
   var dateValue = dateInput.property("value");
 
   // Select the city input element and get the raw HTML node
   var cityInput = d3.select("#city");
-  // Get the value property of the input element
+  // Get the city value property of the input element
   var cityValue = cityInput.property("value");
 
-  var filteredData = tableData.filter(tableData => tableData.datetime === dateValue && tableData.city === cityValue);
+  // Select the state input element and get the raw HTML node
+  var stateInput = d3.select("#state");
+  // Get the state value property of the input element
+  var stateValue = stateInput.property("value");
+
+  // Select the country input element and get the raw HTML node
+  var countryInput = d3.select("#country");
+  // Get the country value property of the input element
+  var countryValue = countryInput.property("value");
+
+  // Select the shape input element and get the raw HTML node
+  var shapeInput = d3.select("#country");
+  // Get the shape value property of the input element
+  var shapeValue = shapeInput.property("value");
+
+  var filteredData = tableData.filter(tableData => (tableData.datetime == dateValue || tableData.datetime ) && tableData.city == cityValue && tableData.state == stateValue && tableData.country == countryValue && tableData.shape == shapeValue);
 
   tbody.html("");
 
