@@ -26,7 +26,7 @@ function runFilter() {
   // Prevent the page from refreshing
   d3.event.preventDefault();
 
-  // Select the input element and get the raw HTML node
+  // Select the input element
   var dateInput = d3.select("#datetime");
   // Get the value property of the input element
   var dateValue = dateInput.property("value");
