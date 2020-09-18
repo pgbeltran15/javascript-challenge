@@ -20,11 +20,9 @@ var filterbutton = d3.select("#filter-btn");
 // Select the form
 var form = d3.select("#form");
 
-
-
 // Create event handlers for date
 filterbutton.on("click", runFilter);
-form.on("submit",runFilter);
+form.on("change",runFilter);
 
 // Create the function to run
 function runFilter() {
@@ -57,17 +55,17 @@ function runFilter() {
   // Get the shape value property of the input element
   var shapeValue = shapeInput.property("value");
 
-  var filteredData = tableData.filter(tableData => (tableData.datetime == dateValue) 
-    || (tableData.city == cityValue) 
-    || (tableData.state == stateValue) 
-    || (tableData.country == countryValue) 
-    || (tableData.shape == shapeValue));
-
   // var filteredData = tableData.filter(tableData => (tableData.datetime == dateValue) 
-  // && (tableData.city == cityValue) 
-  // && (tableData.state == stateValue) 
-  // && (tableData.country == countryValue) 
-  // && (tableData.shape == shapeValue));
+  //   || (tableData.city == cityValue) 
+  //   || (tableData.state == stateValue) 
+  //   || (tableData.country == countryValue) 
+  //   || (tableData.shape == shapeValue));
+
+  var filteredData = tableData.filter(tableData => (tableData.datetime == dateValue) 
+  && (tableData.city == cityValue) 
+  && (tableData.state == stateValue) 
+  && (tableData.country == countryValue) 
+  && (tableData.shape == shapeValue));
 
   tbody.html("");
 

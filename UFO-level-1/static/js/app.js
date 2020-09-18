@@ -20,6 +20,7 @@ var filterbutton = d3.select("#filter-btn");
 // Create event handlers for date
 filterbutton.on("click", runFilter);
 
+
 // Create the function to run
 function runFilter() {
 
