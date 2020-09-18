@@ -8,14 +8,14 @@ var tbody = d3.select("tbody");
 
 //input data into table
 // tableData.forEach(function(tableInput) {
-//     console.log(tableInput);
+//    console.log(tableInput);
 //     var row = tbody.append("tr");
 //     Object.entries(tableInput).forEach(function([key, value]) {
 //       console.log(key, value);
 //       var cell = row.append("td");
 //       cell.text(value);
 //     });
-//   });
+//   }); 
 
 tableData.forEach((tableInput) => {
     var row = tbody.append("tr");
@@ -25,16 +25,11 @@ tableData.forEach((tableInput) => {
     });
 });
 
-  
 // Select the button
-var button = d3.select("#button");
-
-// Select the form
-var form = d3.select("#form");
+var filterbutton = d3.select("#filter-btn");
 
 // Create event handlers for date
-button.on("click", runFilter);
-form.on("submit",runFilter);
+filterbutton.on("click", runFilter);
 
 // Create the function to run
 function runFilter() {
@@ -49,10 +44,14 @@ function runFilter() {
 
   var filteredDate = tableData.filter(tableDate => tableDate.datetime === dateValue);
 
-  
+  tbody.html("");
 
-
-
-
-
+  filteredDate.forEach((tableInput) => {
+    var row = tbody.append("tr");
+    Object.entries(tableInput).forEach(([key, value]) => {
+      var cell = row.append("td");
+      cell.text(value);
+    });
+  });
 };
+
