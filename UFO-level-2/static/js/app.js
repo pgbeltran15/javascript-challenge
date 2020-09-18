@@ -28,8 +28,14 @@ tableData.forEach((tableInput) => {
 // Select the button
 var filterbutton = d3.select("#filter-btn");
 
+// Select the form
+var form = d3.select(".form-group");
+
+
+
 // Create event handlers for date
 filterbutton.on("click", runFilter);
+form.on("submit",runFilter);
 
 // Create the function to run
 function runFilter() {
