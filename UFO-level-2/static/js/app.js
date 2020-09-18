@@ -55,17 +55,17 @@ function runFilter() {
   // Get the shape value property of the input element
   var shapeValue = shapeInput.property("value");
 
-  // var filteredData = tableData.filter(tableData => (tableData.datetime == dateValue) 
-  //   || (tableData.city == cityValue) 
-  //   || (tableData.state == stateValue) 
-  //   || (tableData.country == countryValue) 
-  //   || (tableData.shape == shapeValue));
-
   var filteredData = tableData.filter(tableData => (tableData.datetime == dateValue) 
-  && (tableData.city == cityValue) 
-  && (tableData.state == stateValue) 
-  && (tableData.country == countryValue) 
-  && (tableData.shape == shapeValue));
+    || (tableData.city == cityValue) 
+    || (tableData.state == stateValue) 
+    || (tableData.country == countryValue) 
+    || (tableData.shape == shapeValue));
+
+  // var filteredData = tableData.filter(tableData => (tableData.datetime == dateValue) 
+  // && (tableData.city == cityValue) 
+  // && (tableData.state == stateValue) 
+  // && (tableData.country == countryValue) 
+  // && (tableData.shape == shapeValue));
 
   tbody.html("");
 
