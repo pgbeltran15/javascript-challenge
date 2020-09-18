@@ -74,6 +74,12 @@ function runFilter() {
     || (tableData.country == countryValue) 
     || (tableData.shape == shapeValue));
 
+  // var filteredData = tableData.filter(tableData => (tableData.datetime == dateValue) 
+  // && (tableData.city == cityValue) 
+  // && (tableData.state == stateValue) 
+  // && (tableData.country == countryValue) 
+  // && (tableData.shape == shapeValue));
+
   tbody.html("");
 
   filteredData.forEach((tableInput) => {
