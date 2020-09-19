@@ -32,7 +32,7 @@ function runFilter() {
   // Get the value property of the input element
   var dateValue = dateInput.property("value");
 
-  var filteredDate = tableData.filter(tableDate => tableDate.datetime === dateValue);
+  var filteredDate = tableData.filter(table => table.datetime === dateValue);
 
   tbody.html("");
 
