@@ -59,8 +59,44 @@ function runFilter() {
     || (table.city === cityValue) 
     || (table.state === stateValue) 
     || (table.country === countryValue) 
-    || (table.shape === shapeValue));
+    || (table.shape === shapeValue)
+  );
+
+  // var filteredData = tableData.filter(table => (table.datetime === dateValue || dateValue == undefined) 
+  //  && (table.city === cityValue || cityValue === null) 
+  //  && (table.state === stateValue || table.state === null) 
+  //  && (table.country === countryValue || table.country === null) 
+  //  && (table.shape === shapeValue || table.shape === null)
+);
+
+
+  // function dateFilter (table) {
+  //   return table.datetime === dateValue
+  // }
+
+  // function cityFilter (table) {
+  //   return table.city === cityValue
+  // }
+  
+  // function stateFilter (table) {
+  //   return table.state === stateValue
+  // }
+
+  // function countryFilter (table) {
+  //   return table.country === countryValue
+  // }
+
+  // function shapeFilter (table) {
+  //   return table.shape === shapeValue
+  // }
+
+  // function combinedFilter (Table) {
+  //   if (Table.filter(stateFilter)) {
+  //     return Table.filter(stateFilter)
+  //   }
+  // }
  
+
   tbody.html("");
 
   filteredData.forEach((tableInput) => {
