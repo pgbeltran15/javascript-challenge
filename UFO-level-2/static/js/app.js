@@ -67,7 +67,7 @@ function runFilter() {
   //  && (table.state === stateValue || table.state === null) 
   //  && (table.country === countryValue || table.country === null) 
   //  && (table.shape === shapeValue || table.shape === null)
-);
+  // );
 
 
   // function dateFilter (table) {
@@ -106,9 +106,6 @@ function runFilter() {
       cell.text(value);
     });  
   });
-  
- 
-  
 
 };
 
